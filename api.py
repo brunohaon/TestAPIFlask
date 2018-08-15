@@ -24,6 +24,11 @@ def postContact():
     tel = request.get_json()['tel']
     return "Mail: {} --- Tel: {}".format(mail, tel)
 
+@app.route('/test', methods=['POST'])
+def postContact():
+    info1 = request.get_json()['info1']
+    info2 = request.get_json()['info2']
+    return "Info1: {} --- Info2: {}".format(info1, info2)
 
 if __name__ == '__main__':
     app.run(debug=True)
